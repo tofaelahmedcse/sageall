@@ -20,17 +20,17 @@
     <button class="toggle-sfx active"></button>
     <div id="banner1" class="banner">
        <video loop autoplay id="bgvid" class="video-js" preload="auto">
-          <source src="http://loftson9.com/wp-content/themes/lofts9/video/lofts_9.mp4" type="video/mp4">
-          <source src="http://loftson9.com/wp-content/themes/lofts9/video/lofts_9.webm" type="video/webm">
-          <source src="http://loftson9.com/wp-content/themes/lofts9/video/lofts_9.ogv" type="video/ogg">
+          <source src="<?php the_field('video_mp4'); ?>" type="video/mp4">
+          <source src="<?php the_field('video_webm'); ?>" type="video/webm">
+          <source src="<?php the_field('video_ogg'); ?>" type="video/ogg">
        </video>
        <span class="gradient"></span>
        <span class="logo-bg"></span>
     </div>
  </div>
- <div id="featured-banner" class="show-for-small">
+ <div id="featured-banner" class="show-for-small home">
     <div class="banner">
-       <aside class="bg-body" style="background: url('wp-content/uploads/2014/07/Exterior_L9-2.jpg') center center no-repeat"></aside>
+       <aside class="bg-body" style="background: url('<?php the_field('background_image'); ?>') center center no-repeat"></aside>
        <span class="gradient"></span>
        <span class="logo-bg"></span>
     </div>
