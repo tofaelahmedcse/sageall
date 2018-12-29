@@ -91,4 +91,85 @@ Container::getInstance()
         ]);
     }, true);
 
+/* Customize API */
 
+function theme_customize($theme_section){
+    
+    $theme_section->add_section('header_options', array(
+        'title' => 'Header Options',
+        'priority' => 20
+    ));
+    
+   $theme_section->add_setting('phone_number', array(
+        'default' => '',
+        'transport' => 'refresh'
+    ));
+
+    $theme_section->add_control('phone_number', array(
+        'label' => 'Phone Number',
+        'section' => 'header_options',
+        'type' => 'text'
+    ));
+     $theme_section->add_setting('phone_number_link', array(
+        'default' => '',
+        'transport' => 'refresh'
+    ));
+
+    $theme_section->add_control('phone_number_link', array(
+        'label' => 'Phone Number Link',
+        'section' => 'header_options',
+        'type' => 'text'
+    ));
+    
+   
+    
+   
+    /* footer Option */
+    
+    $theme_section->add_section('footer_options', array(
+        'title' => 'Footer Options',
+        'priority' => 35
+    ));
+    $theme_section->add_setting('facebook_icon', array(
+        'default' => '',
+        'transport' => 'refresh'
+    ));
+
+    $theme_section->add_control('facebook_icon', array(
+        'label' => 'Facebook',
+        'section' => 'footer_options',
+        'type' => 'text'
+    ));
+    $theme_section->add_setting('instagram_icon', array(
+        'default' => '',
+        'transport' => 'refresh'
+    ));
+
+    $theme_section->add_control('instagram_icon', array(
+        'label' => 'Instagram',
+        'section' => 'footer_options',
+        'type' => 'text'
+    ));
+    $theme_section->add_setting('shapeless_icon', array(
+        'default' => '',
+        'transport' => 'refresh'
+    ));
+
+    $theme_section->add_control('shapeless_icon', array(
+        'label' => 'Shapeless',
+        'section' => 'footer_options',
+        'type' => 'text'
+    ));
+    $theme_section->add_setting('copyright_text', array(
+        'default' => '',
+        'transport' => 'refresh'
+    ));
+
+    $theme_section->add_control('copyright_text', array(
+        'label' => 'Copy Right Text',
+        'section' => 'footer_options',
+        'type' => 'text'
+    ));
+    
+}
+add_action('customize_register', 'theme_customize');
